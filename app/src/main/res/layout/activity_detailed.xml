@@ -20,7 +20,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/white"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp">
 
@@ -124,18 +124,25 @@
                 app:cardCornerRadius="8dp"
                 app:cardElevation="10dp" />
 
-            <ProgressBar
-                android:id="@+id/webViewLoader"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:progress="50"/>
-
-            <WebView
-                android:id="@+id/webView"
+            <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp" />
+                tools:ignore="WebViewLayout">
+
+                <ProgressBar
+                    android:id="@+id/webViewLoader"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:progress="50"/>
+
+                <WebView
+                    android:id="@+id/webView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp" />
+
+            </FrameLayout>
 
         </LinearLayout>
 
